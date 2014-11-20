@@ -122,13 +122,9 @@ class MoveMarsRover
 		
 			if @commands[i] == "L"
 				turn_left
-			end
-
-			if @commands[i] == "R"
+			elsif @commands[i] == "R"
 				turn_right
-			end
-
-			if @commands[i] == "M"
+			elsif @commands[i] == "M"
 				move_forward
 			end
 
