@@ -46,23 +46,41 @@ end
 location = ROVER_ONE_STARTING_LOCATION
 
 
+puts "initial direction -> #{direction}"
+puts "initial location[0] -> #{location[0]}"
+puts "initial location[1] -> #{location[1]}"
+
 for i in 0..ROVER_ONE_MOVES.length
 
+	print "Processing command #{i}..."
+
 	if ROVER_ONE_MOVES[i] == "L"
+
+		puts "Turning left!"
+
 		if direction == 0
 			direction = 360
 		end
 		direction = direction - 90
+
 	end
 
 	if ROVER_ONE_MOVES[i] == "R"
+
+		puts "Turning right!"
+
 		if direction == 360
 			direction = 0
 		end
 		direction = direction + 90
+		
 	end
 
+	
+
 	if ROVER_ONE_MOVES[i] == "M"
+
+		puts "Moving!"
 
 		if direction == 0 || 360
 			location[1] = location[1] + 1
@@ -76,10 +94,11 @@ for i in 0..ROVER_ONE_MOVES.length
 
 	end
 
-end
+	puts "Finished command"
+	puts direction
+	puts location
 
-print direction
-print location
+end
 
 
 # Move Rover 2
