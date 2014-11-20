@@ -122,15 +122,15 @@ class MoveMarsRover
 		
 		for i in 0..@commands.length
 		
-			if @command[i] = "L"
+			if @command[i] == "L"
 				turn_left
 			end
 
-			if @command[i] = "R"
+			if @command[i] == "R"
 				turn_right
 			end
 
-			if @command[i] = "M"
+			if @command[i] == "M"
 				move_forward
 			end
 
