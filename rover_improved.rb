@@ -146,12 +146,12 @@ class MoveMarsRover
 
 end
 
-rover_one = MoveMarsRover.new(1, 2, "N", ROVER_ONE_MOVES)
+rover_one = MoveMarsRover.new(ROVER_ONE_STARTING_X_COORDINATE, ROVER_ONE_STARTING_Y_COORDINATE, ROVER_ONE_STARTING_DIRECTION, ROVER_ONE_MOVES)
 rover_one.convert_direction_to_degrees
 rover_one.process_commands
 rover_one.output_final_location
 
-rover_two = MoveMarsRover.new(3, 3, "E", ROVER_TWO_MOVES)
+rover_two = MoveMarsRover.new(ROVER_TWO_STARTING_X_COORDINATE, ROVER_TWO_STARTING_Y_COORDINATE, ROVER_TWO_STARTING_DIRECTION, ROVER_TWO_MOVES)
 rover_two.convert_direction_to_degrees
 rover_two.process_commands
 rover_two.output_final_location
