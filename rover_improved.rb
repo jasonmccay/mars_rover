@@ -96,22 +96,22 @@ class MoveMarsRover
 
 		if @direction == 0 || @direction == 360
 			@y_coord = @y_coord + 1
-			puts "moved north"
+			#puts "moved north"
 		end
 		
 		if @direction == 90
 			@x_coord = @x_coord + 1
-			puts "moved east"
+			#puts "moved east"
 		end
 		
 		if @direction == 180
 			@y_coord = @y_coord - 1
-			puts "moved south"
+			#puts "moved south"
 		end
 
 		if @direction == 270
 			@x_coord = @x_coord - 1
-			puts "moved west"
+			#puts "moved west"
 		end
 
 	end
@@ -122,15 +122,15 @@ class MoveMarsRover
 		
 		for i in 0..@commands.length
 		
-			if @command[i] == "L"
+			if @commands[i] == "L"
 				turn_left
 			end
 
-			if @command[i] == "R"
+			if @commands[i] == "R"
 				turn_right
 			end
 
-			if @command[i] == "M"
+			if @commands[i] == "M"
 				move_forward
 			end
 
@@ -140,8 +140,19 @@ class MoveMarsRover
 
 
 	def output_final_location
-		print x_coord + " " + y_coord + " " + convert_degrees_to_direction
+		puts @x_coord.to_s + " " + @y_coord.to_s + " " + convert_degrees_to_direction
 	end
 
 
 end
+
+rover_one = MoveMarsRover.new(1, 2, "N", ROVER_ONE_MOVES)
+rover_one.convert_direction_to_degrees
+rover_one.process_commands
+rover_one.output_final_location
+
+rover_two = MoveMarsRover.new(3, 3, "E", ROVER_TWO_MOVES)
+rover_two.convert_direction_to_degrees
+rover_two.process_commands
+rover_two.output_final_location
+
