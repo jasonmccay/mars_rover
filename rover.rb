@@ -64,13 +64,13 @@ for i in 0..ROVER_ONE_MOVES.length
 
 	if ROVER_ONE_MOVES[i] == "M"
 
-		if direction = 0 || 360
+		if direction == 0 || 360
 			location[1] = location[1] + 1
-		elsif direction = 90
+		elsif direction == 90
 			location[0] = location[0] + 1
-		elsif direction = 180
+		elsif direction == 180
 			location[1] = location[1] - 1
-		elsif direction = 270
+		elsif direction == 270
 			location[0] = location[0] - 1
 		end
 
