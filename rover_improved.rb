@@ -54,19 +54,19 @@ class MoveMarsRover
 
 	def convert_degrees_to_direction
 
-		if @direction = 0
+		if @direction == 0
 			return "N"
 		end
 
-		if @direction = 90
+		if @direction == 90
 			return "E"
 		end
 
-		if @direction = 180
+		if @direction == 180
 			return "S"
 		end
 
-		if @direction = 270
+		if @direction == 270
 			return "W"
 		end
 	end
