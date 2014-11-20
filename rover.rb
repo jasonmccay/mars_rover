@@ -8,7 +8,7 @@
 MIN_COORDINATES = [0,0]
 MAX_COORDINATES = [5,5]
 
-ROVER_ONE_LOCATION = [1,2]
+ROVER_ONE_STARTING_LOCATION = [1,2]
 ROVER_ONE_STARTING_DIRECTION = "N"
 ROVER_ONE_MOVES = ["L", "M", "L", "M", "L", "M", "L", "M", "M"]
 
@@ -29,7 +29,7 @@ COMPASS = [0, -1, -2, -3]
 
 
 
-# Move Rover 1
+## define rover 1 initial direction
 
 if ROVER_ONE_STARTING_DIRECTION == "N"
 	direction = 0
@@ -40,6 +40,10 @@ elsif ROVER_ONE_STARTING_DIRECTION == "S"
 elsif ROVER_ONE_STARTING_DIRECTION == "E"
 	direction = 90
 end
+
+## define rover 1 initial location
+
+location = ROVER_ONE_STARTING_LOCATION
 
 
 for i in 0..ROVER_ONE_MOVES.length
@@ -61,11 +65,21 @@ for i in 0..ROVER_ONE_MOVES.length
 	if ROVER_ONE_MOVES[i] == "M"
 
 		if direction = 0 || 360
+			location[1] = location[1] + 1
+		elsif direction = 90
+			location[0] = location[0] + 1
+		elsif direction = 180
+			location[1] = location[1] - 1
+		elsif direction = 270
+			location[0] = location[0] - 1
+		end
 
+	end
 
 end
 
 print direction
+print location
 
 
 # Move Rover 2
