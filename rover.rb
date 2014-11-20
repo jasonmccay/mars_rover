@@ -77,8 +77,6 @@ for i in 0..ROVER_ONE_MOVES.length
 
 	end
 
-	
-
 	if ROVER_ONE_MOVES[i] == "M"
 
 		puts "Moving!"
@@ -164,8 +162,6 @@ for i in 0..ROVER_TWO_MOVES.length
 		direction = direction + 90
 
 	end
-
-	
 
 	if ROVER_TWO_MOVES[i] == "M"
 
